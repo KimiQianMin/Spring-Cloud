@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: spring-cloud-zuul
+    
+server:
+  port: 8003
+
+management: # spring-boot-starter-acturator
+  port: 8001
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://user:password@localhost:8000/eureka
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+
+zuul:
+  routes:
+    abc:
+      path: /api-ba/**
+      service-id: spring-cloud-vsl-ba-consumer
+#ribbon:
+#  eureka:
+#    enabled: false
+#microservice-vsl-ba:
+#  ribbon:
+#    listOfServers: http://localhost:8081,http://localhost:8082
+
+hystrix:
+  command:
+    spring-cloud-vsl-ba-consumer:
+    
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
