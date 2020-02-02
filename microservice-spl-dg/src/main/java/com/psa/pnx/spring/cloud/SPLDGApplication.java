@@ -9,10 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class SPLDGDApplication {
+public class SPLDGApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SPLDGDApplication.class, args);
+		SpringApplication.run(SPLDGApplication.class, args);
 	}
 
 	@Bean
