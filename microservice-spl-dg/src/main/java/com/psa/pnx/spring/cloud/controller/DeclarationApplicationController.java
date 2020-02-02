@@ -14,7 +14,7 @@ public class DeclarationApplicationController {
 	@Autowired
 	private DeclarationService declarationService;
 
-	@GetMapping("/spl/dgd/{id}")
+	@GetMapping("/spl/dg/declaration/{id}")
 	public Declaration findById(@PathVariable Integer id) {
 		return declarationService.getDeclaration(id);
 	}

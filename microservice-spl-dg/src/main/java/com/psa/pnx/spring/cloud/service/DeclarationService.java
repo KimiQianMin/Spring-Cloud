@@ -36,11 +36,12 @@ public class DeclarationService {
 			Map<String, Object> map = mapper.readValue(json, Map.class);
 
 			d.setId((Integer) map.get("id"));
-			d.setTerminal("SG_TERMAIL_" + map.get("id"));
+			d.setBaTerminal("SG_TERMAIL_" + map.get("id"));
 			d.setBerthingTime(new Date((Long) map.get("berthingTime")));
-			d.setServerPort((String) map.get("serverPort"));
+			d.setBaServerPort((String) map.get("serverPort"));
 
 			d.setChemicalName("Test");
+			d.setServerPort(serverPort);
 
 		} catch (JsonParseException e) {
 			e.printStackTrace();

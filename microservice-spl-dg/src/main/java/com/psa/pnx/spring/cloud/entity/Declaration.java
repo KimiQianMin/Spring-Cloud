@@ -5,10 +5,11 @@ import java.util.Date;
 public class Declaration {
 
 	private Integer id;
-	private String serverPort;
-	private String terminal;
+	private String baServerPort;
+	private String baTerminal;
 	private Date berthingTime;
 	private String chemicalName;
+	private String serverPort;
 
 	public Integer getId() {
 		return id;
@@ -18,20 +19,20 @@ public class Declaration {
 		this.id = id;
 	}
 
-	public String getServerPort() {
-		return serverPort;
+	public String getBaServerPort() {
+		return baServerPort;
 	}
 
-	public void setServerPort(String serverPort) {
-		this.serverPort = serverPort;
+	public void setBaServerPort(String baServerPort) {
+		this.baServerPort = baServerPort;
 	}
 
-	public String getTerminal() {
-		return terminal;
+	public String getBaTerminal() {
+		return baTerminal;
 	}
 
-	public void setTerminal(String terminal) {
-		this.terminal = terminal;
+	public void setBaTerminal(String baTerminal) {
+		this.baTerminal = baTerminal;
 	}
 
 	public Date getBerthingTime() {
@@ -50,10 +51,19 @@ public class Declaration {
 		this.chemicalName = chemicalName;
 	}
 
+	public String getServerPort() {
+		return serverPort;
+	}
+
+	public void setServerPort(String serverPort) {
+		this.serverPort = serverPort;
+	}
+
 	@Override
 	public String toString() {
-		return "Declaration [id=" + id + ", serverPort=" + serverPort + ", terminal=" + terminal + ", berthingTime="
-				+ berthingTime + ", chemicalName=" + chemicalName + "]";
+		return "Declaration [id=" + id + ", baServerPort=" + baServerPort + ", baTerminal=" + baTerminal
+				+ ", berthingTime=" + berthingTime + ", chemicalName=" + chemicalName + ", serverPort=" + serverPort
+				+ "]";
 	}
 
 }
