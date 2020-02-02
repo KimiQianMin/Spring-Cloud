@@ -31,7 +31,7 @@ zuul:
       service-id: microservice-vsl-ba
     spl-dg:
       path: /spl-dgd-api/**
-      service-id: microservice-spl-dgd
+      service-id: microservice-spl-dg
 #ribbon:
 #  eureka:
 #    enabled: false
