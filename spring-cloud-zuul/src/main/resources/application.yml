@@ -1,3 +1,10 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: user
+    password: password
+
 spring:
   application:
     name: spring-cloud-zuul
@@ -18,9 +25,13 @@ eureka:
 
 zuul:
   routes:
-    abc:
-      path: /api-ba/**
-      service-id: spring-cloud-vsl-ba-consumer
+    vsl-ba:
+      path: /vsl-ba-api/**
+      #service-id: spring-cloud-vsl-ba-consumer
+      service-id: microservice-vsl-ba
+    spl-dg:
+      path: /spl-dgd-api/**
+      service-id: microservice-spl-dgd
 #ribbon:
 #  eureka:
 #    enabled: false
